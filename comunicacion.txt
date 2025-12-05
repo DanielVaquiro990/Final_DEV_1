@@ -45,3 +45,5 @@ class JugadorBase(BaseModel):
 #-----------------Partido---------------
 
 y ese donde se hace o que 
+
+mk creo que ya medio se como para los mensajes 
