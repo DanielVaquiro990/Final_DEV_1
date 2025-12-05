@@ -6,3 +6,4 @@ y como lo hago eso no lo se rick
 
 reinicie el pc y le da la opcion de cambiarse a DEBIAN que es linux y abre todo otra vez hagale y yo sigo avanzando y me avisa
 bueno pues ya entonces hago eso  
+mk haga el COMMIT por que no me apparecen las carpetas creadas 
