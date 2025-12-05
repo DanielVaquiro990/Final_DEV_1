@@ -3,3 +3,5 @@ VOLVI
 
 MK TOCA QUE SE CAMBIE DE WINDOWS A LINUX SI NO PAILA DE HACER COMMIT PORQUE ESTOSPC CAMBIAN AUTOMATICAMENTE LA CUENTE DE GIT
 y como lo hago eso no lo se rick
+
+reinicie el pc y le da la opcion de cambiarse a DEBIAN que es linux y abre todo otra vez hagale y yo sigo avanzando y me avisa
