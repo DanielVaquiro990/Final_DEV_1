@@ -6,5 +6,4 @@ mk eso al final haga los routers
 si algo cuando vaya hacer el COMMIT ante de todo haga un "git pull" para que se actualice todo y ya luego el commit normal
 mire el de jugador, ya quedo faltan los otros DEDATOS
 
-ya lo mire voy a intentar enlazarlo con el html
-Oiga como los esta haciendo? innombrable?
+mk el este no sabe como hacer la parte del equipo solo pudo con lo de jugador, y lo de stadisticas ni se diga 
