@@ -7,3 +7,4 @@ si algo cuando vaya hacer el COMMIT ante de todo haga un "git pull" para que se 
 mire el de jugador, ya quedo faltan los otros DEDATOS
 
 ya lo mire voy a intentar enlazarlo con el html
+Oiga como los esta haciendo? innombrable?
