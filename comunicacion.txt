@@ -1,1 +1,3 @@
 YA LO HICE YA HICE EL COMMIT SI LE APARECEN? YA INCLUSO ANÑADI LO DE LA BASE DEDATOS
+sisa
+intetnte instalar fastapi por que a mo no me dejo dice que hay un error 
