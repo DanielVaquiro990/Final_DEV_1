@@ -1,4 +1,5 @@
 VOLVI
+<<<<<<< HEAD
 
 
 MK TOCA QUE SE CAMBIE DE WINDOWS A LINUX SI NO PAILA DE HACER COMMIT PORQUE ESTOSPC CAMBIAN AUTOMATICAMENTE LA CUENTE DE GIT
@@ -17,10 +18,14 @@ o sea tengo que hacer a cada rato git pull y despues hacer el commit? que pereza
 =======
 
 mk cada vez que responda tiene que hacer el commit change
+=======
+>>>>>>> 935a78d5305624b417ed34a7691ecd2968988337
 
 
-si leo algunos mensajes suyos 
+MK TOCA QUE SE CAMBIE DE WINDOWS A LINUX SI NO PAILA DE HACER COMMIT PORQUE ESTOSPC CAMBIAN AUTOMATICAMENTE LA CUENTE DE GIT
+y como lo hago eso no lo se rick
 
+<<<<<<< HEAD
 
 Mk mire si lo deja añadir el schemas y le hace commit mientrras me paso a linux
 
@@ -58,3 +63,8 @@ mk creo que ya medio se como para los mensajes
 
 entonces ya subi los schemas, voy a hacer la parte de los rurtes para enlasalos con la database
 que tambien voy a hacer para ir organizando por que quemamos tiempo en comunicarnos
+=======
+reinicie el pc y le da la opcion de cambiarse a DEBIAN que es linux y abre todo otra vez hagale y yo sigo avanzando y me avisa
+bueno pues ya entonces hago eso  
+mk haga el COMMIT por que no me apparecen las carpetas creadas 
+>>>>>>> 935a78d5305624b417ed34a7691ecd2968988337
