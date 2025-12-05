@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head %}
-    <title>Registrar Ganado</title>
+    <title>Registrar Jugador</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="/static/css/styles_formularios.css"> 
 {% endblock %}
@@ -13,18 +13,18 @@
         <p class="form-message">Ingrese la información detallada del jugador</p>
 
         <!-- IMPORTANTE: enctype multipart/form-data -->
-        <form id="registroGanadoForm" enctype="multipart/form-data">
+        <form id="registroJugadorForm" enctype="multipart/form-data">
             
-            <label for="nomre">Nombre:</label>
+            <label for="nombre">Nombre:</label>
             <div class="input-group">
                 <div class="icon-container"><i class="fa-solid fa-tag"></i></div>
                 <input type="text" id="nombre" placeholder="Nombre" required>
             </div>
 
-            <label for="dorsal">Dorsal</label>
+            <label for="numero_dorsal">Número dorsal</label>
             <div class="input-group">
                 <div class="icon-container"><i class="fa-solid fa-pen-to-square"></i></div>
-                <input type="number" id="dorsal" placeholder="Numero Dorsal" required min="0" required max="99">
+                <input type="number" id="numero_dorsal" placeholder="Numero Dorsal" required min="0" required max="99">
             </div>
             
             <label for="fechaNacimiento">Fecha de Nacimiento:</label>
@@ -50,10 +50,10 @@
                 <input type="number" id="peso" placeholder="Peso" required min="0" >
             </div>
 
-            <label for="pie"> Pie dominante </label>
+            <label for="pie_dominante"> Pie dominante </label>
             <div class="input-group">
                 <div class="icon-container"><i class="fa-solid fa-clock"></i></div>
-                <input type="text" id="pie" placeholder="Pie dominante">
+                <input type="text" id="pie_dominante" placeholder="Pie dominante">
             </div>
 
             <label for="posicion"> Posición </label>
@@ -67,27 +67,24 @@
 </div>
 
 <script>
-const form = document.getElementById("registroGanadoForm");
+const form = document.getElementById("registroJugadorForm");
 const mensajeEl = document.getElementById("mensaje");
 
 form.addEventListener("submit", async (e) => {
     e.preventDefault();
 
     const formData = new FormData();
-    formData.append("identificacion", document.getElementById("identificacion").value.trim());
-    formData.append("nombre", document.getElementById("nombre").value.trim() || '');
+    formData.append("nombre", document.getElementById("nombre").value.trim());
+    formData.append("numero_dorsal", document.getElementById("numero_dorsal").value.trim() || '');
     formData.append("fecha_nacimiento", document.getElementById("fechaNacimiento").value);
-    formData.append("sexo", document.getElementById("sexo").value);
-    formData.append("edad", document.getElementById("edad").value);
-    formData.append("finca_id", document.getElementById("finca").value);
-    formData.append("tipo_animal_id", document.getElementById("tipoAnimal").value);
+    formData.append("nacionalidad", document.getElementById("acionalidad").value);
+    formData.append("altura", document.getElementById("altura").value);
+    formData.append("peso", document.getElementById("peso").value);
+    formData.append("pie_dominante", document.getElementById("pie_dominante").value);
+    formData.append("posicion", document.getElementById("posicion").value);
 
-    const fotoInput = document.getElementById("foto");
-    if (fotoInput.files.length > 0) {
-        formData.append("foto", fotoInput.files[0]);
-    }
 
-    const response = await fetch("/ganado/api/", {
+    const response = await fetch("/jugador/api/", {
         method: "POST",
         body: formData
     });
