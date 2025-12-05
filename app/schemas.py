@@ -26,19 +26,29 @@ class Jugador(JugadorBase):
 
 #-------------Estadistica----------
 
-class EstadisticaBase(BaseModel):
-    minutos : int
-    goles : int
-    faltas : int
-    CantidadTarjetas : int
+class EstadisticasBase(BaseModel):
+    goles: int = 0
+    asistencias: int = 0
+    tarjetas_amarillas: int = 0
+    tarjetas_rojas: int = 0
+    partidos_jugados: int = 0
 
-class EstadisticaCreate(EstadisticaBase):
-    pass
-
-class Estadistica(EstadisticaBase):
-    id : int
     class Config:
         orm_mode = True
+
+class EstadisticasJugadorCreate(EstadisticasBase):
+    pass
+
+class EstadisticasJugadorUpdate(EstadisticasBase):
+    pass
+
+class EstadisticasJugador(EstadisticasBase):
+    id: int
+    jugador_id: int
+
+    class Config:
+        orm_mode = True
+
 
 
 
@@ -57,3 +67,6 @@ class Partido(PartidoBase):
     id : int
     class Config:
         orm_mode = True
+
+
+

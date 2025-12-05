@@ -154,3 +154,62 @@ def actualizar_jugador(jugador_id: int, datos: schemas.JugadorUpdateData, db: Se
 
     db.refresh(jugador)
     return jugador
+
+
+@router.post("/api/{jugador_id}/estadisticas", response_model=schemas.EstadisticasJugador)
+def crear_estadisticas(jugador_id: int, estadisticas: schemas.EstadisticasJugadorCreate, db: Session = Depends(get_db)):
+    jugador = db.query(models.Jugador).filter(models.Jugador.id == jugador_id).first()
+    
+    if not jugador:
+        raise HTTPException(status_code=404, detail="Jugador no encontrado")
+    
+    nueva_estadistica = models.EstadisticasJugador(
+        goles=estadisticas.goles,
+        asistencias=estadisticas.asistencias,
+        tarjetas_amarillas=estadisticas.tarjetas_amarillas,
+        tarjetas_rojas=estadisticas.tarjetas_rojas,
+        partidos_jugados=estadisticas.partidos_jugados,
+        jugador_id=jugador.id
+    )
+
+    db.add(nueva_estadistica)
+    db.commit()
+    db.refresh(nueva_estadistica)
+
+    return nueva_estadistica
+
+@router.get("/api/{jugador_id}/estadisticas", response_model=schemas.EstadisticasJugador)
+def obtener_estadisticas(jugador_id: int, db: Session = Depends(get_db)):
+    estadisticas = db.query(models.EstadisticasJugador).filter(models.EstadisticasJugador.jugador_id == jugador_id).first()
+    
+    if not estadisticas:
+        raise HTTPException(status_code=404, detail="Estadísticas no encontradas para este jugador")
+    
+    return estadisticas
+
+@router.put("/api/{jugador_id}/estadisticas", response_model=schemas.EstadisticasJugador)
+def actualizar_estadisticas(jugador_id: int, estadisticas: schemas.EstadisticasJugadorUpdate, db: Session = Depends(get_db)):
+    estadisticas_existentes = db.query(models.EstadisticasJugador).filter(models.EstadisticasJugador.jugador_id == jugador_id).first()
+    
+    if not estadisticas_existentes:
+        raise HTTPException(status_code=404, detail="Estadísticas no encontradas para este jugador")
+    
+    for key, value in estadisticas.dict(exclude_unset=True).items():
+        setattr(estadisticas_existentes, key, value)
+    
+    db.commit()
+    db.refresh(estadisticas_existentes)
+    
+    return estadisticas_existentes
+
+@router.delete("/api/{jugador_id}/estadisticas", response_model=dict)
+def eliminar_estadisticas(jugador_id: int, db: Session = Depends(get_db)):
+    estadisticas = db.query(models.EstadisticasJugador).filter(models.EstadisticasJugador.jugador_id == jugador_id).first()
+    
+    if not estadisticas:
+        raise HTTPException(status_code=404, detail="Estadísticas no encontradas para este jugador")
+    
+    db.delete(estadisticas)
+    db.commit()
+    
+    return {"mensaje": "Estadísticas eliminadas correctamente"}
