@@ -20,15 +20,19 @@ class Jugador(Base):
     pass
 
 
-class Estadistica(Base):
-    __tablename__ ="Estadistica"
-    
+class EstadisticasJugador(Base):
+    __tablename__ = "estadisticas_jugador"
+
     id = Column(Integer, primary_key=True, index=True)
-    minutos = Column(Integer, nullable=False)
-    goles = Column(Integer, nullable=False)
-    faltas = Column(Integer, nullable=False)
-    CantidadTarjetas = Column(Integer, nullable=False)
-    pass
+    goles = Column(Integer, default=0)
+    asistencias = Column(Integer, default=0)
+    tarjetas_amarillas = Column(Integer, default=0)
+    tarjetas_rojas = Column(Integer, default=0)
+    partidos_jugados = Column(Integer, default=0)
+    jugador_id = Column(Integer, ForeignKey("jugador.id"))
+
+    jugador = relationship("Jugador", back_populates="estadisticas")
+    
 
 
 class Partido(Base):
