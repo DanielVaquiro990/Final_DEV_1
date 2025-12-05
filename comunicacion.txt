@@ -9,4 +9,37 @@ o sea tengo que hacer a cada rato git pull y despues hacer el commit? que pereza
 =======
 
 mk cada vez que responda tiene que hacer el commit change
->>>>>>> 3318dc71bda088eb2e8022c2776dce7d41c091c0
+
+
+si leo algunos mensajes suyos 
+
+
+Mk mire si lo deja añadir el schemas y le hace commit mientrras me paso a linux
+
+
+
+from pydantic import BaseModel
+from typing import Optional
+from datetime import date
+
+#-------------Jugador----------
+
+class JugadorBase(BaseModel):
+    numero = int
+    nombre: str
+    fechaNacimiento = date
+    nacionalidad = str
+    altura = int
+    peso = int 
+    pieDominante = str
+    posicion = str
+
+
+
+
+#-------------Estadistica----------
+
+
+
+
+#-----------------Partido---------------
