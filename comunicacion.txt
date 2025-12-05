@@ -5,3 +5,5 @@ intetnte instalar fastapi por que a mo no me dejo dice que hay un error
 mk eso al final haga los routers 
 si algo cuando vaya hacer el COMMIT ante de todo haga un "git pull" para que se actualice todo y ya luego el commit normal
 mire el de jugador, ya quedo faltan los otros DEDATOS
+
+ya lo mire voy a intentar enlazarlo con el html
