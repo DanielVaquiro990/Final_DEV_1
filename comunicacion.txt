@@ -4,3 +4,14 @@ ya pude mk casi que no puedo comunicarme , y eso que le respondia los comentario
 que esta gaciendo?
 
 mk ya hice los models y el schemas
+pero no me esta dejando haciendole el commit al schemas dije que usted no le ha hecho comit a algo sale esto
+
+PS C:\Usuarios\sala3\Documentos\Final\Final_DEV_1> git push
+A https://github.com/DanielVaquiro990/Final_DEV_1.git
+! [rechazado] main -> main (sin avance rápido)
+Error: No se pudieron enviar algunas referencias a 'https://github.com/DanielVaquiro990/Final_DEV_1.git'
+Pista: Se rechazaron las actualizaciones porque el extremo de la rama actual está retrasado.
+Pista: Su contraparte remota. Si desea integrar los cambios remotos,
+Pista: use 'git pull' antes de volver a enviar.
+Pista: Consulte la 'Nota sobre avances rápidos' en 'git push --help' para obtener más información.
+PS C:\Usuarios\sala3\Documentos\Final\Final_DEV_1>
