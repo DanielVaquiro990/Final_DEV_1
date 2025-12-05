@@ -47,3 +47,6 @@ class JugadorBase(BaseModel):
 y ese donde se hace o que 
 
 mk creo que ya medio se como para los mensajes 
+
+entonces ya subi los schemas, voy a hacer la parte de los rurtes para enlasalos con la database
+que tambien voy a hacer para ir organizando por que quemamos tiempo en comunicarnos
