@@ -10,3 +10,6 @@ mk el este no sabe como hacer la parte del equipo solo pudo con lo de jugador, y
 
 sisas con ese lo hice pero en al hacer la parte de equipo no entendio y no funciono 
 voy a intentar pero con estadisticas 
+
+
+mk pero pasele el models porque me esta haciendo cambiar todos los valores y nombres de todo 
