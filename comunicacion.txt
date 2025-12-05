@@ -4,3 +4,4 @@ ya pude mk casi que no puedo comunicarme , y eso que le respondia los comentario
 que esta gaciendo?
 no se por que no me deja responder bien
 no se si esten saliendo los mensajes 
+o sea tengo que hacer a cada rato git pull y despues hacer el commit? que pereza 
