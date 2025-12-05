@@ -4,4 +4,9 @@ ya pude mk casi que no puedo comunicarme , y eso que le respondia los comentario
 que esta gaciendo?
 no se por que no me deja responder bien
 no se si esten saliendo los mensajes 
+<<<<<<< HEAD
 o sea tengo que hacer a cada rato git pull y despues hacer el commit? que pereza 
+=======
+
+mk cada vez que responda tiene que hacer el commit change
+>>>>>>> 3318dc71bda088eb2e8022c2776dce7d41c091c0
